@@ -1,7 +1,7 @@
 
     function CheckIt(){
-        
-        userInput = String(document.getElementById('personID').value.replace(/[ \.\,\/]/g, ""));
+
+        userInput = String(document.getElementById('personID').value.replace(/[ \.\,\/\_]/g, ""));
         userData = formatData(userInput);
         dob = formatDate(userData);
         wrongStart = "<span style='color:red'>"
@@ -92,5 +92,38 @@
          nbr = Math.floor(combinedDigits%31)
          if(marks[nbr] != userData[5].toUpperCase()) return false;
          return true;
+    }
+
+    function createControlCharacter(userData) {
+       
+        userInput = String(document.getElementById('personID').value.replace(/[ \.\,\/]/g, ""));
+        userData = formatData(userInput);
+        dob = formatDate(userData);
+        marks = "0123456789ABCDEFHJKLMNPRSTUVWXY";
+        wrongStart = "<span style='color:red'>"
+        wrongEnd = "</span>"
+        display =""
+        if (!isValidLength(userInput,10))
+        {
+
+            display += wrongStart+ "False - Wrong input length<br>"+wrongEnd;
+            
+        }
+        else if(!isValidDate(dob)) {
+
+            display += wrongStart+"False - Invalid Date"+wrongEnd;
+        }
+        else  {
+
+            combinedDigits = userData[0] + userData[1] + userData[2] + userData[4];
+            nbr = Math.floor(combinedDigits%31)
+            display =  marks[nbr]
+        }
+           
+            
+    
+        document.getElementById("result").innerHTML = display
+        
+     
     }
 
