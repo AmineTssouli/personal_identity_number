@@ -1,2 +1,2 @@
-# personal_identity_number
+# Personal Finnish Identity Number Checker
 Implement a function that checks the correctness of the personal identity number.
