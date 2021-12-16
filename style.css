@@ -1,0 +1,59 @@
+    
+.container {
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+       
+   }
+
+   input[type=text] {
+    background-color: #4CAF50;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 16px 32px;
+    box-shadow:0px 0px 3px 2px gray;
+    border-radius: 50px;
+    margin: 4px 200px;
+    width:40vw;
+   }
+
+   button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 0px;
+    margin: 4px 2px;
+    text-shadow: 0 0.3px 0 rgb(255, 255, 255);
+    font: inherit;
+    background: #2193b0;  
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    width: 22vw;
+    transition: 0.5s;
+
+   }
+   button:hover {
+
+
+    background: #0F2027;  
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); 
+    box-shadow:0px 0px 3px 2px gray;
+    color: white;
+    font-size: larger;
+    width:25vw;
+    transition: 0.5s;
+
+   }
